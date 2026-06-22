@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tareq Almahamid - Backend .NET Developer Portfolio" />
+  <title>Tareq Almahamid | Backend .NET Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator" id="scrollIndicator"></div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Tareq</span>
+        <span class="logo-bracket"> /&gt;</span>
+      </a>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-name">Tareq Almahamid</h1>
+        <div class="hero-typing-wrapper">
+          <span class="hero-title" id="typingTitle"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          Highly motivated Computer Science graduate with strong experience in designing and developing secure, scalable, and production-ready backend systems using C# and the .NET ecosystem.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+          <a href="assets/My CV-1.pdf" class="btn btn-ghost" id="downloadResume" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/tareq-11" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tareq-almahameed-37876227a" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-frame">
+          <img src="assets/photo_2026-06-22_20-14-24.jpg" alt="Tareq Almahamid" class="hero-image-img" />
+        </div>
+        <div class="hero-status">
+          <span class="status-dot"></span>
+          Open to opportunities
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <a href="#about">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h3>Professional Summary</h3>
+          <p>
+            Highly motivated Computer Science graduate with strong experience in designing and developing secure, scalable, and production-ready backend systems using C# and the .NET ecosystem. Skilled in building RESTful APIs, implementing Clean Architecture, CQRS, Domain Events, Outbox Pattern, SignalR, Redis, JWT Authentication, Docker, SQL Server, and PostgreSQL. Passionate about solving real-world problems and building high-quality software solutions.
+          </p>
+        </div>
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Career Objective</h3>
+          <p>
+            To leverage my strong foundation in backend development and distributed systems to build scalable, high-performance software solutions. Eager to contribute to innovative teams where I can apply my expertise in the .NET ecosystem while continuously growing as a software engineer.
+          </p>
+        </div>
+        <div class="about-info-grid">
+          <div class="info-item">
+            <span class="info-label">Location</span>
+            <span class="info-value">Amman, Jordan</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Languages</span>
+            <span class="info-value">Arabic (Native) &middot; English (Writing, Listening, Speaking)</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Email</span>
+            <span class="info-value">tareqalmahameed543@gmail.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Phone</span>
+            <span class="info-value">0790552907</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-filter">
+        <button class="skill-filter-btn active" data-filter="all">All</button>
+        <button class="skill-filter-btn" data-filter="languages">Languages</button>
+        <button class="skill-filter-btn" data-filter="backend">Backend</button>
+        <button class="skill-filter-btn" data-filter="architecture">Architecture</button>
+        <button class="skill-filter-btn" data-filter="security">Security</button>
+        <button class="skill-filter-btn" data-filter="databases">Databases</button>
+        <button class="skill-filter-btn" data-filter="devops">DevOps</button>
+        <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+        <button class="skill-filter-btn" data-filter="soft">Soft Skills</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Languages -->
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-header">
+            <i class="fas fa-code"></i>
+            <h4>C#</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="95"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-header">
+            <i class="fas fa-database"></i>
+            <h4>SQL</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="languages">
+          <div class="skill-card-header">
+            <i class="fas fa-code"></i>
+            <h4>LINQ</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-server"></i>
+            <h4>ASP.NET Core Web API</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="95"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-database"></i>
+            <h4>Entity Framework Core</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-cogs"></i>
+            <h4>MediatR (CQRS)</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-bolt"></i>
+            <h4>SignalR</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-shield-alt"></i>
+            <h4>ASP.NET Core Identity</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="backend">
+          <div class="skill-card-header">
+            <i class="fas fa-plug"></i>
+            <h4>EF Core Interceptors</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-layer-group"></i>
+            <h4>Clean Architecture</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-sitemap"></i>
+            <h4>CQRS &amp; Domain Events</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="88"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-exchange-alt"></i>
+            <h4>Outbox Pattern</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-sync-alt"></i>
+            <h4>Idempotency</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-check-double"></i>
+            <h4>Optimistic Concurrency</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="architecture">
+          <div class="skill-card-header">
+            <i class="fas fa-memory"></i>
+            <h4>Redis Hybrid Cache</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <!-- Security -->
+        <div class="skill-card" data-category="security">
+          <div class="skill-card-header">
+            <i class="fas fa-lock"></i>
+            <h4>JWT Authentication</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="security">
+          <div class="skill-card-header">
+            <i class="fas fa-sync"></i>
+            <h4>Refresh Token Rotation</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="security">
+          <div class="skill-card-header">
+            <i class="fas fa-user-shield"></i>
+            <h4>RBAC</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="security">
+          <div class="skill-card-header">
+            <i class="fas fa-sms"></i>
+            <h4>OTP Verification</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card" data-category="databases">
+          <div class="skill-card-header">
+            <i class="fas fa-database"></i>
+            <h4>PostgreSQL</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="databases">
+          <div class="skill-card-header">
+            <i class="fas fa-database"></i>
+            <h4>SQL Server</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <!-- DevOps -->
+        <div class="skill-card" data-category="devops">
+          <div class="skill-card-header">
+            <i class="fab fa-docker"></i>
+            <h4>Docker</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-card-header">
+            <i class="fas fa-cogs"></i>
+            <h4>CI/CD Principles</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-card-header">
+            <i class="fas fa-heartbeat"></i>
+            <h4>Health Checks</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-card-header">
+            <i class="fas fa-file-alt"></i>
+            <h4>Structured Logging (Serilog)</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="devops">
+          <div class="skill-card-header">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4>Rate Limiting</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="70"></div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-card-header">
+            <i class="fab fa-html5"></i>
+            <h4>HTML5 &amp; CSS3</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-card-header">
+            <i class="fab fa-bootstrap"></i>
+            <h4>Bootstrap</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="70"></div>
+          </div>
+        </div>
+        <div class="skill-card" data-category="frontend">
+          <div class="skill-card-header">
+            <i class="fab fa-microsoft"></i>
+            <h4>Blazor WebAssembly</h4>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card soft-skill" data-category="soft">
+          <div class="skill-card-header">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Problem Solving</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Analytical</span>
+            <span class="skill-tag">Critical Thinking</span>
+          </div>
+        </div>
+        <div class="skill-card soft-skill" data-category="soft">
+          <div class="skill-card-header">
+            <i class="fas fa-sync-alt"></i>
+            <h4>Adaptability</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Quick Learner</span>
+            <span class="skill-tag">Flexible</span>
+          </div>
+        </div>
+        <div class="skill-card soft-skill" data-category="soft">
+          <div class="skill-card-header">
+            <i class="fas fa-users"></i>
+            <h4>Teamwork</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Collaborative</span>
+            <span class="skill-tag">Supportive</span>
+          </div>
+        </div>
+        <div class="skill-card soft-skill" data-category="soft">
+          <div class="skill-card-header">
+            <i class="fas fa-comments"></i>
+            <h4>Communication</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Clear</span>
+            <span class="skill-tag">Effective</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+        <!-- LifeDrop -->
+        <div class="project-card">
+          <div class="project-card-front">
+            <div class="project-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>LifeDrop</h3>
+            <span class="project-badge">June 2026</span>
+            <p class="project-subtitle">Real-Time Blood Donation Platform</p>
+            <div class="project-tech-badges">
+              <span>.NET 10</span>
+              <span>ASP.NET Core</span>
+              <span>PostgreSQL</span>
+              <span>SignalR</span>
+              <span>Redis</span>
+              <span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/tareq-11/LifeDrop" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+                <i class="fab fa-github"></i> Source
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="lifedrop">
+                <i class="fas fa-expand-alt"></i> Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mechanic Shop -->
+        <div class="project-card">
+          <div class="project-card-front">
+            <div class="project-icon">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Mechanic Shop<br/>Management</h3>
+            <span class="project-badge">January 2026</span>
+            <p class="project-subtitle">Full-Stack Workshop Management System</p>
+            <div class="project-tech-badges">
+              <span>.NET 9</span>
+              <span>Blazor WASM</span>
+              <span>SQL Server</span>
+              <span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/tareq-11/MechanicShop" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+                <i class="fab fa-github"></i> Source
+              </a>
+              <button class="btn btn-small project-details-btn" data-project="mechanicshop">
+                <i class="fas fa-expand-alt"></i> Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modals -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-content" id="modalContent">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Education</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="education-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">
+              <i class="fas fa-calendar-alt"></i> Graduation: June 2026
+            </div>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <h4>Jadara University</h4>
+            <p>
+              Comprehensive education in software development, data structures, algorithms, database systems, and software engineering principles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>Experience</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="exp-meta">
+              <h3>Peer Support &amp; Tech Assistance</h3>
+              <span class="exp-date">2023 - Present</span>
+            </div>
+          </div>
+          <ul class="exp-list">
+            <li>Helping classmates with programming assignments</li>
+            <li>Debugging code and troubleshooting issues</li>
+            <li>Explaining computer science concepts clearly</li>
+            <li>Supporting collaborative learning environments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>Contact</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:tareqalmahameed543@gmail.com">tareqalmahameed543@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <i class="fas fa-phone-alt"></i>
+            <h3>Phone</h3>
+            <a href="tel:0790552907">0790552907</a>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-linkedin-in"></i>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/tareq-almahameed-37876227a" target="_blank" rel="noopener">linkedin.com/in/tareq-almahameed-37876227a</a>
+          </div>
+          <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <a href="https://github.com/tareq-11" target="_blank" rel="noopener">github.com/tareq-11</a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">Tareq</span>
+          <span class="logo-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-tagline">Backend .NET Developer &bull; Building scalable solutions</p>
+        <div class="footer-socials">
+          <a href="https://github.com/tareq-11" target="_blank" rel="noopener" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tareq-almahameed-37876227a" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Tareq Almahamid. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
