@@ -29,8 +29,6 @@
   const footerLogo = $('.footer-logo');
 
   /* ===== Particles Generator ===== */
-
-  /* ===== Particles Generator ===== */
   function createParticles(count = 35) {
     if (!particlesContainer) return;
     for (let i = 0; i < count; i++) {
@@ -51,24 +49,15 @@
   createParticles();
 
   /* ===== Preloader ===== */
-  window.addEventListener('load', () => {
+  function hidePreloader() {
     setTimeout(() => {
-      preloader.classList.add('hidden');
-      if (heroImg) heroImg.classList.remove('clip-reveal');
+      if (preloader) preloader.classList.add('hidden');
     }, 500);
-  });
-
-  /* ===== Hero Image Clip Reveal ===== */
-  if (heroImg) {
-    heroImg.classList.add('clip-reveal');
   }
 
-  /* ===== Preloader ===== */
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      preloader.classList.add('hidden');
-      heroImg.classList.remove('clip-reveal');
-    }, 500);
+  window.addEventListener('load', hidePreloader);
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(hidePreloader, 900);
   });
 
   /* ===== Typing Effect ===== */
@@ -84,6 +73,7 @@
   let typeSpeed = 80;
 
   function typeEffect() {
+    if (!typingTitle) return;
     const current = titles[titleIdx];
     if (!isDeleting) {
       typingTitle.textContent = current.slice(0, charIdx++);
@@ -114,28 +104,32 @@
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'light') {
     document.body.classList.add('light-mode');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    if (themeToggle) themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
   }
 
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    const isLight = document.body.classList.contains('light-mode');
-    themeToggle.innerHTML = isLight
-      ? '<i class="fas fa-moon"></i>'
-      : '<i class="fas fa-sun"></i>';
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-  });
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      const isLight = document.body.classList.contains('light-mode');
+      themeToggle.innerHTML = isLight
+        ? '<i class="fas fa-moon"></i>'
+        : '<i class="fas fa-sun"></i>';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  }
 
   /* ===== Mobile Nav ===== */
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  }
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
+      if (hamburger) hamburger.classList.remove('active');
+      if (navMenu) navMenu.classList.remove('active');
     });
   });
 
@@ -160,17 +154,19 @@
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    scrollIndicator.style.width = progress + '%';
+    if (scrollIndicator) scrollIndicator.style.width = progress + '%';
   }
 
   /* ===== Scroll to Top ===== */
   function toggleScrollTop() {
-    scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    if (scrollTopBtn) scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
   }
 
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /* ===== Section Reveal ===== */
   const sectionObserver = new IntersectionObserver(
