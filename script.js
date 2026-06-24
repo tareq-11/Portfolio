@@ -23,10 +23,49 @@
   const modalClose = $('#modalClose');
   const modalContent = $('#modalContent');
   const contactForm = $('#contactForm');
+  const heroImg = $('.hero-image-img');
+  const projectCards = $$('.project-card');
+  const particlesContainer = $('#particles');
+
+  /* ===== Particles Generator ===== */
+  function createParticles(count = 35) {
+    if (!particlesContainer) return;
+    for (let i = 0; i < count; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      const dur = 15 + Math.random() * 15;
+      particle.style.animationDuration = dur + 's';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      const size = 1.5 + Math.random() * 2;
+      particle.style.width = size + 'px';
+      particle.style.height = size + 'px';
+      particle.style.opacity = 0.1 + Math.random() * 0.3;
+      particlesContainer.appendChild(particle);
+    }
+  }
+  createParticles();
 
   /* ===== Preloader ===== */
   window.addEventListener('load', () => {
-    setTimeout(() => preloader.classList.add('hidden'), 400);
+    setTimeout(() => {
+      preloader.classList.add('hidden');
+      if (heroImg) heroImg.classList.remove('clip-reveal');
+    }, 500);
+  });
+
+  /* ===== Hero Image Clip Reveal ===== */
+  if (heroImg) {
+    heroImg.classList.add('clip-reveal');
+  }
+
+  /* ===== Preloader ===== */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      preloader.classList.add('hidden');
+      heroImg.classList.remove('clip-reveal');
+    }, 500);
   });
 
   /* ===== Typing Effect ===== */
@@ -296,6 +335,25 @@
   });
 
   /* ===== Download Resume ===== */
+
+  /* ===== 3D Tilt Effect on Project Cards ===== */
+  projectCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+      card.style.transform =
+        `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
 
   /* ===== Scroll Events ===== */
   let ticking = false;
