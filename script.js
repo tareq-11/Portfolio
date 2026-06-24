@@ -27,6 +27,7 @@
   const statNumbers = $$('.stat-number[data-target]');
   const navLogo = $('.nav-logo');
   const footerLogo = $('.footer-logo');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ===== Particles Generator ===== */
   function createParticles(count = 35) {
@@ -46,7 +47,7 @@
       particlesContainer.appendChild(particle);
     }
   }
-  createParticles();
+  if (!prefersReducedMotion) createParticles();
 
   /* ===== Preloader ===== */
   function hidePreloader() {
@@ -99,6 +100,14 @@
   }
 
   typeEffect();
+
+  /* ===== Hero Image Reveal ===== */
+  if (heroImg && !prefersReducedMotion) {
+    heroImg.classList.add('clip-reveal');
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => heroImg.classList.remove('clip-reveal'));
+    });
+  }
 
   /* ===== Theme Toggle ===== */
   const savedTheme = localStorage.getItem('theme');
@@ -181,6 +190,47 @@
   );
 
   sections.forEach(sec => sectionObserver.observe(sec));
+
+  /* ===== Staggered Detail Reveal ===== */
+  const revealTargets = $$(
+    [
+      '.stat-card',
+      '.about-bio-card',
+      '.strength-item',
+      '.info-item',
+      '.skill-category',
+      '.project-card',
+      '.timeline-card',
+      '.contact-card',
+      '.contact-form-wrapper',
+      '.cta-card'
+    ].join(',')
+  );
+
+  if (prefersReducedMotion) {
+    revealTargets.forEach(el => el.classList.add('is-visible'));
+  } else {
+    revealTargets.forEach((el, index) => {
+      const localIndex = [...el.parentElement.children].indexOf(el);
+      const delay = Math.min(localIndex * 55, 220);
+      el.classList.add('revealable');
+      el.style.setProperty('--reveal-delay', `${delay}ms`);
+    });
+
+    const detailObserver = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            detailObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    revealTargets.forEach(el => detailObserver.observe(el));
+  }
 
   /* ===== Animate Skill Bars ===== */
   const skillObserver = new IntersectionObserver(

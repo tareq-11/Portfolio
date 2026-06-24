@@ -46,8 +46,8 @@
       <div class="nav-menu" id="navMenu">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#stats" class="nav-link">Highlights</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">My Work</a></li>
           <li><a href="#education" class="nav-link">Education &amp; Journey</a></li>
@@ -75,16 +75,6 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="container hero-content">
-      <!-- Floating Tech Badges (right side only) -->
-      <div class="hero-tech-badges" aria-hidden="true">
-        <span class="tech-badge" style="top: 5%; right: 5%; animation-delay: 0s;">&lt;/&gt;</span>
-        <span class="tech-badge" style="top: 20%; right: 18%; animation-delay: 1.5s;">{ }</span>
-        <span class="tech-badge" style="top: 38%; right: 6%; animation-delay: 3s;">.NET</span>
-        <span class="tech-badge" style="top: 55%; right: 20%; animation-delay: 0.8s;">API</span>
-        <span class="tech-badge" style="bottom: 28%; right: 5%; animation-delay: 2.2s;">SQL</span>
-        <span class="tech-badge" style="bottom: 45%; right: 22%; animation-delay: 4s;">C#</span>
-        <span class="tech-badge" style="bottom: 12%; right: 14%; animation-delay: 1s;">Docker</span>
-      </div>
       <div class="hero-text">
         <p class="hero-greeting">Hi there, I'm</p>
         <h1 class="hero-name">Tareq Almahameed</h1>
@@ -117,6 +107,16 @@
       </div>
       <div class="hero-image">
         <div class="hero-image-frame">
+          <div class="hero-tech-badges" aria-hidden="true">
+            <span class="tech-badge badge-left" style="--badge-y: 14%; --badge-delay: 0s;">C#</span>
+            <span class="tech-badge badge-right" style="--badge-y: 14%; --badge-delay: 1.1s;">.NET</span>
+            <span class="tech-badge badge-left" style="--badge-y: 36%; --badge-delay: 2.2s;">ASP.NET</span>
+            <span class="tech-badge badge-right" style="--badge-y: 36%; --badge-delay: 0.6s;">API</span>
+            <span class="tech-badge badge-left" style="--badge-y: 58%; --badge-delay: 3.1s;">SQL</span>
+            <span class="tech-badge badge-right" style="--badge-y: 58%; --badge-delay: 1.7s;">EF Core</span>
+            <span class="tech-badge badge-left" style="--badge-y: 80%; --badge-delay: 2.7s;">SignalR</span>
+            <span class="tech-badge badge-right" style="--badge-y: 80%; --badge-delay: 3.8s;">Docker</span>
+          </div>
           <img src="assets/photo_2026-06-22_20-14-24.jpg" alt="Tareq Almahameed" class="hero-image-img" />
         </div>
         <div class="hero-status">
@@ -142,11 +142,52 @@
     </div>
   </section>
 
+  <!-- Stats Section -->
+  <section id="stats" class="section section-metrics">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>Highlights</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="stat-number" data-target="2">0</div>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="stat-number" data-target="30">0</div>
+          <p class="stat-label">Technologies Mastered</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="stat-number" data-target="4">0</div>
+          <p class="stat-label">Years of Study</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="stat-number stat-status">Open</div>
+          <p class="stat-label">Available for Work</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">01</span>
+        <span class="section-number">02</span>
         <h2>Who I Am</h2>
         <div class="section-line"></div>
       </div>
@@ -221,47 +262,6 @@
             <span class="info-label"><i class="fas fa-phone"></i> Phone</span>
             <span class="info-value"><a href="tel:0790552907">0790552907</a></span>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Section -->
-  <section id="stats" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-number">02</span>
-        <h2>Highlights</h2>
-        <div class="section-line"></div>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-icon">
-            <i class="fas fa-code-branch"></i>
-          </div>
-          <div class="stat-number" data-target="2">0</div>
-          <p class="stat-label">Projects Completed</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="stat-number" data-target="30">0</div>
-          <p class="stat-label">Technologies Mastered</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="stat-number" data-target="4">0</div>
-          <p class="stat-label">Years of Study</p>
-        </div>
-        <div class="stat-card">
-          <div class="stat-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <div class="stat-number stat-status">Open</div>
-          <p class="stat-label">Available for Work</p>
         </div>
       </div>
     </div>
@@ -463,6 +463,11 @@
               <span class="project-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
             </div>
             <p class="project-desc">Real-time blood donation platform with CQRS, SignalR, Redis caching, and secure authentication.</p>
+            <div class="project-outcomes" aria-label="Project highlights">
+              <span>Clean Architecture</span>
+              <span>Real-time updates</span>
+              <span>Dockerized API</span>
+            </div>
             <div class="project-meta-row">
               <span><i class="fas fa-user"></i> Solo</span>
               <span><i class="fas fa-clock"></i> 1 Month</span>
@@ -500,6 +505,11 @@
               <span class="project-date"><i class="fas fa-calendar-alt"></i> January 2026</span>
             </div>
             <p class="project-desc">Full-stack workshop management with Blazor WASM, RESTful APIs, and Docker containerization.</p>
+            <div class="project-outcomes" aria-label="Project highlights">
+              <span>RESTful APIs</span>
+              <span>Blazor WASM</span>
+              <span>xUnit coverage</span>
+            </div>
             <div class="project-meta-row">
               <span><i class="fas fa-user"></i> Solo</span>
               <span><i class="fas fa-clock"></i> 1 Month</span>
