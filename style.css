@@ -442,10 +442,13 @@ img { max-width: 100%; display: block; }
   padding-top: var(--nav-height);
 }
 
-/* Floating Tech Badges */
+/* Floating Tech Badges (right side only) */
 .hero-tech-badges {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
@@ -1880,6 +1883,37 @@ img { max-width: 100%; display: block; }
 }
 
 
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 4px;
+  transition: background 200ms var(--ease-out);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent-secondary), var(--accent-primary));
+}
+
+/* Light mode scrollbar */
+.light-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5a52d5, #6c63ff);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-primary) var(--bg-primary);
+}
+
 /* ===== Reduced Motion ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -2426,3 +2460,5 @@ img { max-width: 100%; display: block; }
     gap: 14px;
   }
 }
+
+
