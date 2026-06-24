@@ -26,6 +26,9 @@
   const heroImg = $('.hero-image-img');
   const projectCards = $$('.project-card');
   const particlesContainer = $('#particles');
+  const statNumbers = $$('.stat-number[data-target]');
+
+  /* ===== Particles Generator ===== */
 
   /* ===== Particles Generator ===== */
   function createParticles(count = 35) {
@@ -199,6 +202,40 @@
   );
 
   skillBars.forEach(bar => skillObserver.observe(bar));
+
+  /* ===== Animate Stats Counter ===== */
+  const statObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          const duration = 1500;
+          const startTime = performance.now();
+          const startVal = 0;
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // easeOutQuad
+            const eased = progress * (2 - progress);
+            const current = Math.floor(eased * target);
+            el.textContent = current;
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(updateCounter);
+          statObserver.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  statNumbers.forEach(el => statObserver.observe(el));
 
   /* ===== Skills Filter ===== */
   filterBtns.forEach(btn => {

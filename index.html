@@ -40,6 +40,7 @@
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#stats" class="nav-link">Stats</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#education" class="nav-link">Education</a></li>
@@ -68,6 +69,16 @@
       <div class="shape shape-3"></div>
     </div>
     <div class="container hero-content">
+      <!-- Floating Tech Badges -->
+      <div class="hero-tech-badges" aria-hidden="true">
+        <span class="tech-badge" style="top: 15%; left: 5%; animation-delay: 0s;">&lt;/&gt;</span>
+        <span class="tech-badge" style="top: 25%; right: 8%; animation-delay: 1.5s;">{ }</span>
+        <span class="tech-badge" style="bottom: 35%; left: 3%; animation-delay: 3s;">.NET</span>
+        <span class="tech-badge" style="top: 10%; right: 20%; animation-delay: 0.8s;">API</span>
+        <span class="tech-badge" style="bottom: 20%; right: 5%; animation-delay: 2.2s;">SQL</span>
+        <span class="tech-badge" style="top: 40%; left: 8%; animation-delay: 4s;">C#</span>
+        <span class="tech-badge" style="bottom: 15%; left: 15%; animation-delay: 1s;">Docker</span>
+      </div>
       <div class="hero-text">
         <p class="hero-greeting">Hi there, I'm</p>
         <h1 class="hero-name">Tareq Almahameed</h1>
@@ -159,6 +170,42 @@
             <span class="info-label">Phone</span>
             <span class="info-value">0790552907</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-code-branch"></i>
+          </div>
+          <div class="stat-number" data-target="2">0</div>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="stat-number" data-target="30">0</div>
+          <p class="stat-label">Technologies Mastered</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="stat-number" data-target="4">0</div>
+          <p class="stat-label">Years of Study</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-badge-check"></i>
+          </div>
+          <div class="stat-number stat-status">Open</div>
+          <p class="stat-label">Available for Work</p>
         </div>
       </div>
     </div>
@@ -517,6 +564,10 @@
       <div class="projects-grid">
         <!-- LifeDrop -->
         <div class="project-card">
+          <div class="project-thumbnail" style="background: linear-gradient(135deg, #6c63ff, #e74c3c);">
+            <i class="fas fa-heartbeat"></i>
+            <span class="project-featured">Featured</span>
+          </div>
           <div class="project-card-front">
             <div class="project-icon">
               <i class="fas fa-heartbeat"></i>
@@ -524,6 +575,11 @@
             <h3>LifeDrop</h3>
             <span class="project-badge">June 2026</span>
             <p class="project-subtitle">Real-Time Blood Donation Platform</p>
+            <div class="project-meta">
+              <span><i class="fas fa-user"></i> Solo Developer</span>
+              <span><i class="fas fa-calendar"></i> 1 Month</span>
+              <span><i class="fas fa-cogs"></i> Full Stack</span>
+            </div>
             <div class="project-tech-badges">
               <span>.NET 10</span>
               <span>ASP.NET Core</span>
@@ -545,6 +601,9 @@
 
         <!-- Mechanic Shop -->
         <div class="project-card">
+          <div class="project-thumbnail" style="background: linear-gradient(135deg, #00d4aa, #2980b9);">
+            <i class="fas fa-wrench"></i>
+          </div>
           <div class="project-card-front">
             <div class="project-icon">
               <i class="fas fa-wrench"></i>
@@ -552,6 +611,11 @@
             <h3>Mechanic Shop<br/>Management</h3>
             <span class="project-badge">January 2026</span>
             <p class="project-subtitle">Full-Stack Workshop Management System</p>
+            <div class="project-meta">
+              <span><i class="fas fa-user"></i> Solo Developer</span>
+              <span><i class="fas fa-calendar"></i> 1 Month</span>
+              <span><i class="fas fa-cogs"></i> Full Stack</span>
+            </div>
             <div class="project-tech-badges">
               <span>.NET 9</span>
               <span>Blazor WASM</span>
