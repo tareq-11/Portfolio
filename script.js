@@ -25,6 +25,8 @@
   const projectCards = $$('.project-card');
   const particlesContainer = $('#particles');
   const statNumbers = $$('.stat-number[data-target]');
+  const navLogo = $('.nav-logo');
+  const footerLogo = $('.footer-logo');
 
   /* ===== Particles Generator ===== */
 
@@ -386,5 +388,62 @@
 
   /* ===== Initial Nav Highlight ===== */
   updateActiveLink();
+
+  /* ===== Easter Egg: Logo Bounce ===== */
+  function bounceLogo(el) {
+    if (!el) return;
+    el.style.transition = 'transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1)';
+    el.style.transform = 'scale(1.3)';
+    setTimeout(() => {
+      el.style.transform = 'scale(0.9)';
+      setTimeout(() => {
+        el.style.transform = 'scale(1.1)';
+        setTimeout(() => {
+          el.style.transform = 'scale(1)';
+          setTimeout(() => {
+            el.style.transition = '';
+          }, 150);
+        }, 100);
+      }, 100);
+    }, 150);
+  }
+
+  if (navLogo) {
+    navLogo.addEventListener('click', () => bounceLogo(navLogo));
+  }
+  if (footerLogo) {
+    footerLogo.addEventListener('click', () => bounceLogo(footerLogo));
+  }
+
+  /* ===== Console Easter Egg ===== */
+  console.log(
+    '%c👋 Hey there, curious developer!%c\n\n' +
+    '%cThanks for checking out my portfolio!%c\n' +
+    'If you\'re interested in the code, check out:\n' +
+    'https://github.com/tareq-11/Portfolio\n\n' +
+    '%c💡 Fun fact:%c This portfolio is built with pure HTML, CSS, and Vanilla JS — no frameworks!',
+    'font-size: 20px; font-weight: bold; color: #6c63ff;',
+    '',
+    'font-size: 14px; color: #888;',
+    '',
+    'font-size: 14px; color: #6c63ff; font-weight: bold;',
+    'font-size: 14px; color: #888;'
+  );
+
+  /* ===== Tab Title Easter Egg ===== */
+  const originalTitle = document.title;
+  let titleTimeout;
+
+  document.addEventListener('visibilitychange', () => {
+    clearTimeout(titleTimeout);
+    if (document.hidden) {
+      document.title = '👋 Come back soon!';
+    } else {
+      document.title = '✨ Tareq Almahameed | Backend .NET Developer';
+      titleTimeout = setTimeout(() => {
+        document.title = originalTitle;
+      }, 3000);
+    }
+  });
 
 })();
