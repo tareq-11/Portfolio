@@ -135,40 +135,75 @@
         <div class="section-line"></div>
       </div>
       <div class="about-content">
-        <div class="about-card">
-          <div class="about-icon">
-            <i class="fas fa-user-tie"></i>
+        <div class="about-bio-card">
+          <div class="about-bio-icon">
+            <i class="fas fa-quote-left"></i>
           </div>
-          <h3>Professional Summary</h3>
-          <p>
-            Highly motivated Computer Science graduate with strong experience in designing and developing secure, scalable, and production-ready backend systems using C# and the .NET ecosystem. Skilled in building RESTful APIs, implementing Clean Architecture, CQRS, Domain Events, Outbox Pattern, SignalR, Redis, JWT Authentication, Docker, SQL Server, and PostgreSQL. Passionate about solving real-world problems and building high-quality software solutions.
+          <p class="about-bio-text">
+            Highly motivated Computer Science graduate specializing in <strong>C# and the .NET ecosystem</strong>. 
+            I design and build secure, scalable backend systems — from RESTful APIs and Clean Architecture 
+            to real-time communication with SignalR and containerized deployments with Docker.
           </p>
-        </div>
-        <div class="about-card">
-          <div class="about-icon">
-            <i class="fas fa-bullseye"></i>
+          <div class="about-bio-focus">
+            <span>Currently focused on: <strong>Distributed Systems &amp; Cloud-Native Development</strong></span>
           </div>
-          <h3>Career Objective</h3>
-          <p>
-            To leverage my strong foundation in backend development and distributed systems to build scalable, high-performance software solutions. Eager to contribute to innovative teams where I can apply my expertise in the .NET ecosystem while continuously growing as a software engineer.
-          </p>
         </div>
+
+        <div class="about-strengths">
+          <div class="strength-item">
+            <div class="strength-icon" style="--str-hue: 220;">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="strength-text">
+              <h4>Clean Architecture</h4>
+              <p>CQRS, Domain Events, Outbox Pattern</p>
+            </div>
+          </div>
+          <div class="strength-item">
+            <div class="strength-icon" style="--str-hue: 160;">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="strength-text">
+              <h4>Real-Time Systems</h4>
+              <p>SignalR, Redis Cache, Live Notifications</p>
+            </div>
+          </div>
+          <div class="strength-item">
+            <div class="strength-icon" style="--str-hue: 270;">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="strength-text">
+              <h4>Security-First</h4>
+              <p>JWT, RBAC, OTP, Refresh Token Rotation</p>
+            </div>
+          </div>
+          <div class="strength-item">
+            <div class="strength-icon" style="--str-hue: 30;">
+              <i class="fas fa-docker"></i>
+            </div>
+            <div class="strength-text">
+              <h4>DevOps Ready</h4>
+              <p>Docker, CI/CD, Health Checks, Serilog</p>
+            </div>
+          </div>
+        </div>
+
         <div class="about-info-grid">
           <div class="info-item">
-            <span class="info-label">Location</span>
+            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
             <span class="info-value">Amman, Jordan</span>
           </div>
           <div class="info-item">
-            <span class="info-label">Languages</span>
-            <span class="info-value">Arabic (Native) &middot; English (Writing, Listening, Speaking)</span>
+            <span class="info-label"><i class="fas fa-globe"></i> Languages</span>
+            <span class="info-value">Arabic (Native) · English (Professional)</span>
           </div>
           <div class="info-item">
-            <span class="info-label">Email</span>
-            <span class="info-value">tareqalmahameed543@gmail.com</span>
+            <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+            <span class="info-value"><a href="mailto:tareqalmahameed543@gmail.com">tareqalmahameed543@gmail.com</a></span>
           </div>
           <div class="info-item">
-            <span class="info-label">Phone</span>
-            <span class="info-value">0790552907</span>
+            <span class="info-label"><i class="fas fa-phone"></i> Phone</span>
+            <span class="info-value"><a href="tel:0790552907">0790552907</a></span>
           </div>
         </div>
       </div>
@@ -220,335 +255,166 @@
         <div class="section-line"></div>
       </div>
 
-      <div class="skills-filter">
-        <button class="skill-filter-btn active" data-filter="all">All</button>
-        <button class="skill-filter-btn" data-filter="languages">Languages</button>
-        <button class="skill-filter-btn" data-filter="backend">Backend</button>
-        <button class="skill-filter-btn" data-filter="architecture">Architecture</button>
-        <button class="skill-filter-btn" data-filter="security">Security</button>
-        <button class="skill-filter-btn" data-filter="databases">Databases</button>
-        <button class="skill-filter-btn" data-filter="devops">DevOps</button>
-        <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
-        <button class="skill-filter-btn" data-filter="soft">Soft Skills</button>
-      </div>
+      <div class="skills-showcase">
 
-      <div class="skills-grid" id="skillsGrid">
-        <!-- Languages -->
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-header">
-            <i class="fas fa-code"></i>
-            <h4>C#</h4>
+        <!-- Languages Category -->
+        <div class="skill-category" data-category="languages" style="--cat-hue: 220;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-code"></i></div>
+            <div class="cat-header-text">
+              <h3>Languages</h3>
+              <span class="cat-skill-count">3 Skills</span>
+            </div>
+            <span class="cat-proficiency">High</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="95"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-header">
-            <i class="fas fa-database"></i>
-            <h4>SQL</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="languages">
-          <div class="skill-card-header">
-            <i class="fas fa-code"></i>
-            <h4>LINQ</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="90"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 95;">
+              <span class="sci-name">C#</span>
+              <div class="sci-bar"><div class="sci-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-cat-item" style="--item-level: 85;">
+              <span class="sci-name">SQL</span>
+              <div class="sci-bar"><div class="sci-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-cat-item" style="--item-level: 90;">
+              <span class="sci-name">LINQ</span>
+              <div class="sci-bar"><div class="sci-fill" data-width="90"></div></div>
+            </div>
           </div>
         </div>
 
-        <!-- Backend -->
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-server"></i>
-            <h4>ASP.NET Core Web API</h4>
+        <!-- Backend Category -->
+        <div class="skill-category" data-category="backend" style="--cat-hue: 270;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-server"></i></div>
+            <div class="cat-header-text">
+              <h3>Backend</h3>
+              <span class="cat-skill-count">6 Skills</span>
+            </div>
+            <span class="cat-proficiency">High</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="95"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-database"></i>
-            <h4>Entity Framework Core</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-cogs"></i>
-            <h4>MediatR (CQRS)</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-bolt"></i>
-            <h4>SignalR</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-shield-alt"></i>
-            <h4>ASP.NET Core Identity</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="backend">
-          <div class="skill-card-header">
-            <i class="fas fa-plug"></i>
-            <h4>EF Core Interceptors</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 95;"><span class="sci-name">ASP.NET Core Web API</span><div class="sci-bar"><div class="sci-fill" data-width="95"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 90;"><span class="sci-name">Entity Framework Core</span><div class="sci-bar"><div class="sci-fill" data-width="90"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 90;"><span class="sci-name">MediatR (CQRS)</span><div class="sci-bar"><div class="sci-fill" data-width="90"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">SignalR</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">ASP.NET Core Identity</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">EF Core Interceptors</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
           </div>
         </div>
 
-        <!-- Architecture -->
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-layer-group"></i>
-            <h4>Clean Architecture</h4>
+        <!-- Architecture Category -->
+        <div class="skill-category" data-category="architecture" style="--cat-hue: 190;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-layer-group"></i></div>
+            <div class="cat-header-text">
+              <h3>Architecture & Patterns</h3>
+              <span class="cat-skill-count">6 Skills</span>
+            </div>
+            <span class="cat-proficiency">Advanced</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-sitemap"></i>
-            <h4>CQRS &amp; Domain Events</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="88"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-exchange-alt"></i>
-            <h4>Outbox Pattern</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-sync-alt"></i>
-            <h4>Idempotency</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-check-double"></i>
-            <h4>Optimistic Concurrency</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="architecture">
-          <div class="skill-card-header">
-            <i class="fas fa-memory"></i>
-            <h4>Redis Hybrid Cache</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="80"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 90;"><span class="sci-name">Clean Architecture</span><div class="sci-bar"><div class="sci-fill" data-width="90"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 88;"><span class="sci-name">CQRS & Domain Events</span><div class="sci-bar"><div class="sci-fill" data-width="88"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 80;"><span class="sci-name">Outbox Pattern</span><div class="sci-bar"><div class="sci-fill" data-width="80"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">Idempotency</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">Optimistic Concurrency</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 80;"><span class="sci-name">Redis Hybrid Cache</span><div class="sci-bar"><div class="sci-fill" data-width="80"></div></div></div>
           </div>
         </div>
 
-        <!-- Security -->
-        <div class="skill-card" data-category="security">
-          <div class="skill-card-header">
-            <i class="fas fa-lock"></i>
-            <h4>JWT Authentication</h4>
+        <!-- Security Category -->
+        <div class="skill-category" data-category="security" style="--cat-hue: 0;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-lock"></i></div>
+            <div class="cat-header-text">
+              <h3>Security</h3>
+              <span class="cat-skill-count">4 Skills</span>
+            </div>
+            <span class="cat-proficiency">Advanced</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="90"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="security">
-          <div class="skill-card-header">
-            <i class="fas fa-sync"></i>
-            <h4>Refresh Token Rotation</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="security">
-          <div class="skill-card-header">
-            <i class="fas fa-user-shield"></i>
-            <h4>RBAC</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="security">
-          <div class="skill-card-header">
-            <i class="fas fa-sms"></i>
-            <h4>OTP Verification</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="80"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 90;"><span class="sci-name">JWT Authentication</span><div class="sci-bar"><div class="sci-fill" data-width="90"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 80;"><span class="sci-name">Refresh Token Rotation</span><div class="sci-bar"><div class="sci-fill" data-width="80"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">RBAC</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 80;"><span class="sci-name">OTP Verification</span><div class="sci-bar"><div class="sci-fill" data-width="80"></div></div></div>
           </div>
         </div>
 
-        <!-- Databases -->
-        <div class="skill-card" data-category="databases">
-          <div class="skill-card-header">
-            <i class="fas fa-database"></i>
-            <h4>PostgreSQL</h4>
+        <!-- Databases Category -->
+        <div class="skill-category" data-category="databases" style="--cat-hue: 160;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-database"></i></div>
+            <div class="cat-header-text">
+              <h3>Databases</h3>
+              <span class="cat-skill-count">2 Skills</span>
+            </div>
+            <span class="cat-proficiency">Proficient</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="databases">
-          <div class="skill-card-header">
-            <i class="fas fa-database"></i>
-            <h4>SQL Server</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">PostgreSQL</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">SQL Server</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
           </div>
         </div>
 
-        <!-- DevOps -->
-        <div class="skill-card" data-category="devops">
-          <div class="skill-card-header">
-            <i class="fab fa-docker"></i>
-            <h4>Docker</h4>
+        <!-- DevOps Category -->
+        <div class="skill-category" data-category="devops" style="--cat-hue: 30;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fab fa-docker"></i></div>
+            <div class="cat-header-text">
+              <h3>DevOps & Tools</h3>
+              <span class="cat-skill-count">5 Skills</span>
+            </div>
+            <span class="cat-proficiency">Proficient</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="85"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="devops">
-          <div class="skill-card-header">
-            <i class="fas fa-cogs"></i>
-            <h4>CI/CD Principles</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="devops">
-          <div class="skill-card-header">
-            <i class="fas fa-heartbeat"></i>
-            <h4>Health Checks</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="70"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="devops">
-          <div class="skill-card-header">
-            <i class="fas fa-file-alt"></i>
-            <h4>Structured Logging (Serilog)</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="80"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="devops">
-          <div class="skill-card-header">
-            <i class="fas fa-tachometer-alt"></i>
-            <h4>Rate Limiting</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="70"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 85;"><span class="sci-name">Docker</span><div class="sci-bar"><div class="sci-fill" data-width="85"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">CI/CD Principles</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 70;"><span class="sci-name">Health Checks</span><div class="sci-bar"><div class="sci-fill" data-width="70"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 80;"><span class="sci-name">Serilog</span><div class="sci-bar"><div class="sci-fill" data-width="80"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 70;"><span class="sci-name">Rate Limiting</span><div class="sci-bar"><div class="sci-fill" data-width="70"></div></div></div>
           </div>
         </div>
 
-        <!-- Frontend -->
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-card-header">
-            <i class="fab fa-html5"></i>
-            <h4>HTML5 &amp; CSS3</h4>
+        <!-- Frontend Category -->
+        <div class="skill-category" data-category="frontend" style="--cat-hue: 50;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fab fa-html5"></i></div>
+            <div class="cat-header-text">
+              <h3>Frontend</h3>
+              <span class="cat-skill-count">3 Skills</span>
+            </div>
+            <span class="cat-proficiency">Intermediate</span>
           </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-card-header">
-            <i class="fab fa-bootstrap"></i>
-            <h4>Bootstrap</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="70"></div>
-          </div>
-        </div>
-        <div class="skill-card" data-category="frontend">
-          <div class="skill-card-header">
-            <i class="fab fa-microsoft"></i>
-            <h4>Blazor WebAssembly</h4>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-bar-fill" data-width="75"></div>
+          <div class="skill-category-items">
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">HTML5 & CSS3</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 70;"><span class="sci-name">Bootstrap</span><div class="sci-bar"><div class="sci-fill" data-width="70"></div></div></div>
+            <div class="skill-cat-item" style="--item-level: 75;"><span class="sci-name">Blazor WebAssembly</span><div class="sci-bar"><div class="sci-fill" data-width="75"></div></div></div>
           </div>
         </div>
 
-        <!-- Soft Skills -->
-        <div class="skill-card soft-skill" data-category="soft">
-          <div class="skill-card-header">
-            <i class="fas fa-lightbulb"></i>
-            <h4>Problem Solving</h4>
+        <!-- Soft Skills Category -->
+        <div class="skill-category" data-category="soft" style="--cat-hue: 300;">
+          <div class="skill-category-header">
+            <div class="cat-icon-wrapper"><i class="fas fa-users"></i></div>
+            <div class="cat-header-text">
+              <h3>Soft Skills</h3>
+              <span class="cat-skill-count">4 Traits</span>
+            </div>
+            <span class="cat-proficiency">Strong</span>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Analytical</span>
-            <span class="skill-tag">Critical Thinking</span>
-          </div>
-        </div>
-        <div class="skill-card soft-skill" data-category="soft">
-          <div class="skill-card-header">
-            <i class="fas fa-sync-alt"></i>
-            <h4>Adaptability</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Quick Learner</span>
-            <span class="skill-tag">Flexible</span>
-          </div>
-        </div>
-        <div class="skill-card soft-skill" data-category="soft">
-          <div class="skill-card-header">
-            <i class="fas fa-users"></i>
-            <h4>Teamwork</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Collaborative</span>
-            <span class="skill-tag">Supportive</span>
+          <div class="skill-category-items soft-skills-items">
+            <span class="soft-skill-tag">Problem Solving</span>
+            <span class="soft-skill-tag">Analytical</span>
+            <span class="soft-skill-tag">Critical Thinking</span>
+            <span class="soft-skill-tag">Adaptability</span>
+            <span class="soft-skill-tag">Quick Learner</span>
+            <span class="soft-skill-tag">Teamwork</span>
+            <span class="soft-skill-tag">Collaborative</span>
+            <span class="soft-skill-tag">Communication</span>
           </div>
         </div>
-        <div class="skill-card soft-skill" data-category="soft">
-          <div class="skill-card-header">
-            <i class="fas fa-comments"></i>
-            <h4>Communication</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Clear</span>
-            <span class="skill-tag">Effective</span>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -563,36 +429,37 @@
       </div>
       <div class="projects-grid">
         <!-- LifeDrop -->
-        <div class="project-card">
-          <div class="project-thumbnail" style="background: linear-gradient(135deg, #6c63ff, #e74c3c);">
-            <i class="fas fa-heartbeat"></i>
-            <span class="project-featured">Featured</span>
-          </div>
-          <div class="project-card-front">
-            <div class="project-icon">
+        <div class="project-card" data-project="lifedrop">
+          <div class="project-card-banner" style="background: linear-gradient(135deg, #6c63ff, #e74c3c);">
+            <div class="project-banner-overlay">
               <i class="fas fa-heartbeat"></i>
             </div>
-            <h3>LifeDrop</h3>
-            <span class="project-badge">June 2026</span>
-            <p class="project-subtitle">Real-Time Blood Donation Platform</p>
-            <div class="project-meta">
-              <span><i class="fas fa-user"></i> Solo Developer</span>
-              <span><i class="fas fa-calendar"></i> 1 Month</span>
-              <span><i class="fas fa-cogs"></i> Full Stack</span>
+            <span class="project-badge-featured">Featured</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h3>LifeDrop</h3>
+              <span class="project-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
             </div>
-            <div class="project-tech-badges">
-              <span>.NET 10</span>
-              <span>ASP.NET Core</span>
-              <span>PostgreSQL</span>
-              <span>SignalR</span>
-              <span>Redis</span>
-              <span>Docker</span>
+            <p class="project-desc">Real-time blood donation platform with CQRS, SignalR, Redis caching, and secure authentication.</p>
+            <div class="project-meta-row">
+              <span><i class="fas fa-user"></i> Solo</span>
+              <span><i class="fas fa-clock"></i> 1 Month</span>
+              <span><i class="fas fa-cubes"></i> Full Stack</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/tareq-11/LifeDrop" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+            <div class="project-tech-icons">
+              <span class="tech-icon" title=".NET 10"><i class="fab fa-microsoft"></i></span>
+              <span class="tech-icon" title="PostgreSQL"><i class="fas fa-database"></i></span>
+              <span class="tech-icon" title="SignalR"><i class="fas fa-bolt"></i></span>
+              <span class="tech-icon" title="Redis"><i class="fas fa-memory"></i></span>
+              <span class="tech-icon" title="Docker"><i class="fab fa-docker"></i></span>
+              <span class="tech-icon-label">+5 more</span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/tareq-11/LifeDrop" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
                 <i class="fab fa-github"></i> Source
               </a>
-              <button class="btn btn-small project-details-btn" data-project="lifedrop">
+              <button class="btn btn-outline btn-sm project-details-btn" data-project="lifedrop">
                 <i class="fas fa-expand-alt"></i> Details
               </button>
             </div>
@@ -600,33 +467,34 @@
         </div>
 
         <!-- Mechanic Shop -->
-        <div class="project-card">
-          <div class="project-thumbnail" style="background: linear-gradient(135deg, #00d4aa, #2980b9);">
-            <i class="fas fa-wrench"></i>
-          </div>
-          <div class="project-card-front">
-            <div class="project-icon">
+        <div class="project-card" data-project="mechanicshop">
+          <div class="project-card-banner" style="background: linear-gradient(135deg, #00d4aa, #2980b9);">
+            <div class="project-banner-overlay">
               <i class="fas fa-wrench"></i>
             </div>
-            <h3>Mechanic Shop<br/>Management</h3>
-            <span class="project-badge">January 2026</span>
-            <p class="project-subtitle">Full-Stack Workshop Management System</p>
-            <div class="project-meta">
-              <span><i class="fas fa-user"></i> Solo Developer</span>
-              <span><i class="fas fa-calendar"></i> 1 Month</span>
-              <span><i class="fas fa-cogs"></i> Full Stack</span>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h3>Mechanic Shop Management</h3>
+              <span class="project-date"><i class="fas fa-calendar-alt"></i> January 2026</span>
             </div>
-            <div class="project-tech-badges">
-              <span>.NET 9</span>
-              <span>Blazor WASM</span>
-              <span>SQL Server</span>
-              <span>Docker</span>
+            <p class="project-desc">Full-stack workshop management with Blazor WASM, RESTful APIs, and Docker containerization.</p>
+            <div class="project-meta-row">
+              <span><i class="fas fa-user"></i> Solo</span>
+              <span><i class="fas fa-clock"></i> 1 Month</span>
+              <span><i class="fas fa-cubes"></i> Full Stack</span>
             </div>
-            <div class="project-links">
-              <a href="https://github.com/tareq-11/MechanicShop" target="_blank" rel="noopener" class="btn btn-small btn-ghost">
+            <div class="project-tech-icons">
+              <span class="tech-icon" title=".NET 9"><i class="fab fa-microsoft"></i></span>
+              <span class="tech-icon" title="Blazor"><i class="fab fa-microsoft"></i></span>
+              <span class="tech-icon" title="SQL Server"><i class="fas fa-database"></i></span>
+              <span class="tech-icon" title="Docker"><i class="fab fa-docker"></i></span>
+            </div>
+            <div class="project-card-actions">
+              <a href="https://github.com/tareq-11/MechanicShop" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
                 <i class="fab fa-github"></i> Source
               </a>
-              <button class="btn btn-small project-details-btn" data-project="mechanicshop">
+              <button class="btn btn-outline btn-sm project-details-btn" data-project="mechanicshop">
                 <i class="fas fa-expand-alt"></i> Details
               </button>
             </div>
@@ -656,16 +524,27 @@
       </div>
       <div class="education-timeline">
         <div class="timeline-item">
-          <div class="timeline-dot"></div>
+          <div class="timeline-marker">
+            <div class="timeline-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-line"></div>
+          </div>
           <div class="timeline-card">
-            <div class="timeline-date">
-              <i class="fas fa-calendar-alt"></i> Graduation: June 2026
+            <div class="timeline-card-top">
+              <span class="timeline-badge">Graduated</span>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
             </div>
             <h3>Bachelor of Science in Computer Science</h3>
-            <h4>Jadara University</h4>
+            <h4 class="timeline-institution">Jadara University, Jordan</h4>
             <p>
-              Comprehensive education in software development, data structures, algorithms, database systems, and software engineering principles.
+              Comprehensive education in software development, data structures, algorithms, database systems, and software engineering principles. Developed a strong foundation in backend development, system design, and problem-solving.
             </p>
+            <div class="timeline-highlights">
+              <span><i class="fas fa-check-circle"></i> Backend Development Focus</span>
+              <span><i class="fas fa-check-circle"></i> Distributed Systems</span>
+              <span><i class="fas fa-check-circle"></i> Database Design &amp; Optimization</span>
+            </div>
           </div>
         </div>
       </div>
@@ -680,23 +559,27 @@
         <h2>Experience</h2>
         <div class="section-line"></div>
       </div>
-      <div class="experience-grid">
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-icon">
+      <div class="education-timeline"><!-- Reusing same timeline styles -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
-            <div class="exp-meta">
-              <h3>Peer Support &amp; Tech Assistance</h3>
-              <span class="exp-date">2023 - Present</span>
-            </div>
+            <div class="timeline-line"></div>
           </div>
-          <ul class="exp-list">
-            <li>Helping classmates with programming assignments</li>
-            <li>Debugging code and troubleshooting issues</li>
-            <li>Explaining computer science concepts clearly</li>
-            <li>Supporting collaborative learning environments</li>
-          </ul>
+          <div class="timeline-card">
+            <div class="timeline-card-top">
+              <span class="timeline-badge timeline-badge-current">Current</span>
+              <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2023 - Present</span>
+            </div>
+            <h3>Peer Support &amp; Tech Assistance</h3>
+            <ul class="timeline-bullets">
+              <li>Helping classmates with programming assignments and debugging code</li>
+              <li>Troubleshooting complex technical issues across various .NET projects</li>
+              <li>Explaining computer science concepts clearly to support collaborative learning</li>
+              <li>Assisting with database design, API structure, and code review</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -753,25 +636,56 @@
     </div>
   </section>
 
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Ready to Build Something Great?</h2>
+        <p>I'm currently open to opportunities and always happy to connect about backend development, .NET projects, or just to chat about tech.</p>
+        <div class="cta-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <i class="fas fa-paper-plane"></i> Get In Touch
+          </a>
+          <a href="assets/My CV-1.pdf" class="btn btn-outline btn-lg" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <span class="logo-bracket">&lt;</span>
-          <span class="logo-text">Tareq</span>
-          <span class="logo-bracket"> /&gt;</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>
+            <span class="logo-text">Tareq</span>
+            <span class="logo-bracket"> /&gt;</span>
+          </div>
+          <p class="footer-tagline">Backend .NET Developer building scalable, production-ready solutions.</p>
         </div>
-        <p class="footer-tagline">Backend .NET Developer &bull; Building scalable solutions</p>
-        <div class="footer-socials">
-          <a href="https://github.com/tareq-11" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/tareq-almahameed-37876227a" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <p class="footer-copy">&copy; 2026 Tareq Almahameed. All rights reserved.</p>
+        <div class="footer-socials-col">
+          <h4>Connect</h4>
+          <div class="footer-social-links">
+            <a href="https://github.com/tareq-11" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tareq-almahameed-37876227a" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:tareqalmahameed543@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tareq Almahameed. All rights reserved.</p>
       </div>
     </div>
   </footer>

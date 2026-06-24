@@ -15,9 +15,7 @@
   const navLinks = $$('.nav-link');
   const sections = $$('.section');
   const typingTitle = $('#typingTitle');
-  const skillBars = $$('.skill-bar-fill');
-  const skillCards = $$('.skill-card');
-  const filterBtns = $$('.skill-filter-btn');
+  const skillBars = $$('.sci-fill');
   const projectDetailBtns = $$('.project-details-btn');
   const modalOverlay = $('#modalOverlay');
   const modalClose = $('#modalClose');
@@ -193,7 +191,6 @@
         if (entry.isIntersecting) {
           const target = entry.target;
           target.style.width = target.dataset.width + '%';
-          target.closest('.skill-card').classList.add('visible');
           skillObserver.unobserve(target);
         }
       });
@@ -237,26 +234,7 @@
 
   statNumbers.forEach(el => statObserver.observe(el));
 
-  /* ===== Skills Filter ===== */
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      skillCards.forEach(card => {
-        const cat = card.dataset.category;
-        if (filter === 'all' || cat === filter) {
-          card.style.display = 'block';
-          card.style.animation = 'none';
-          requestAnimationFrame(() => {
-            card.style.animation = 'fadeUp 0.4s ease forwards';
-          });
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
+
 
   /* ===== Project Modal Data ===== */
   const projectData = {
